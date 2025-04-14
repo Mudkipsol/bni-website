@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B.N.I Access Portal</title>
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Modal overlay for video -->
+  <div class="modal-overlay" id="videoModal">
+    <div class="modal-container">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close modal"></button>
+      <div class="modal-video-wrapper">
+        <div class="video-controls">
+          <div class="progress-bar">
+            <div class="progress-bar-filled"></div>
+            <input type="range" class="progress-seek" value="0" min="0" max="100" step="0.1">
+          </div>
+          <div class="time-display">
+            <span class="current-time">0:00</span>
+            <span class="duration">0:48</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Warning Modal -->
+  <div class="modal-overlay" id="warningModal">
+    <div class="modal-container warning-modal">
+      <button class="modal-close" id="warningModalCloseBtn" aria-label="Close warning modal"></button>
+      <div class="warning-content">
+        <div class="warning-text">
+          <h2>Warning!</h2>
+          <p>We haven't launched yet! Beware of fake links and launches, we will never DM you!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Splash screen -->
+  <div class="splash-screen">
+    <div class="overlay"></div>
+    <div class="splash-content">
+      <h1 class="restricted-text">ACCESS RESTRICTED</h1>
+      <h2 class="employees-text">B.N.I EMPLOYEES ONLY</h2>
+      <img src="./assets/images/bni-diamond-text.png" alt="Enter the B.N.I HQ" class="confirm-button" id="confirmButton" loading="eager">
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Top scrolling ticker -->
+    <div class="scroll-container top" role="button" tabindex="0" aria-label="Click to copy text">
+      <div class="scroll-text">
+        <span>Launching on May 16th at 4PM EST</span>
+        <span>Launching on May 16th at 4PM EST</span>
+        <span>Launching on May 16th at 4PM EST</span>
+        <span>Launching on May 16th at 4PM EST</span>
+        <span>Launching on May 16th at 4PM EST</span>
+        <span>Launching on May 16th at 4PM EST</span>
+        <span>Launching on May 16th at 4PM EST</span>
+        <span>Launching on May 16th at 4PM EST</span>
+      </div>
+      <div class="copy-notification" aria-live="polite">Copied!</div>
+    </div>
+
+    <!-- Hero section with background video -->
+    <header class="hero">
+      <div class="video-container">
+        <video loop playsinline id="bgVideo" class="desktop-video" preload="metadata">
+          <source src="https://pouch.jumpshare.com/preview/-GbUpi6yBH_An_-l31jWcKSksi-i98m_1GdsJXAKrITbr3FAkxZoOe-TrKpLgAfDaTJgOeCNN8v_aN5j56gckIhtxaLW41-kHe3I-d9GG6wTeIlpTo03hsPGVodpyKUHXQIHQbYNXidegdnoG1Nl626yjbN-I2pg_cnoHs_AmgI.mp4" type="video/mp4" media="(min-width: 769px)">
+        </video>
+        <video loop playsinline id="bgVideoMobile" class="mobile-video" preload="metadata">
+          <source src="https://pouch.jumpshare.com/preview/-GbUpi6yBH_An_-l31jWcKSksi-i98m_1GdsJXAKrITbr3FAkxZoOe-TrKpLgAfDaTJgOeCNN8v_aN5j56gckIhtxaLW41-kHe3I-d9GG6wTeIlpTo03hsPGVodpyKUHXQIHQbYNXidegdnoG1Nl626yjbN-I2pg_cnoHs_AmgI.mp4" type="video/mp4" media="(max-width: 768px)">
+        </video>
+      </div>
+    </header>
+
+    <!-- Bottom scrolling ticker -->
+    <div class="scroll-container bottom" role="button" tabindex="0" aria-label="Click to copy text">
+      <div class="scroll-text">
+        <span>Launching on May 16th at 4PM EST</span>
+        <span>Launching on May 16th at 4PM EST</span>
+        <span>Launching on May 16th at 4PM EST</span>
+        <span>Launching on May 16th at 4PM EST</span>
+        <span>Launching on May 16th at 4PM EST</span>
+        <span>Launching on May 16th at 4PM EST</span>
+        <span>Launching on May 16th at 4PM EST</span>
+        <span>Launching on May 16th at 4PM EST</span>
+      </div>
+      <div class="copy-notification" aria-live="polite">Copied!</div>
+    </div>
+
+    <!-- Footer with social links -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="social-links">
+          <a href="https://instagram.com/brokefellainc" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link">
+            <img src="https://ext.same-assets.com/3119757670/2455412849.png" alt="Instagram" class="social-icon">
+          </a>
+          <a href="https://x.com/brokefellainc" target="_blank" rel="noopener noreferrer" aria-label="X" class="social-link">
+            <img src="https://ext.same-assets.com/3119757670/3405411633.png" alt="X" class="social-icon">
+          </a>
+          <a href="https://t.me/brokeniggainc" target="_blank" rel="noopener noreferrer" aria-label="Telegram" class="social-link">
+            <img src="https://ext.same-assets.com/3119757670/1278452282.png" alt="Telegram" class="social-icon">
+          </a>
+          <a href="#" data-warning="true" aria-label="Dex" class="social-link">
+            <img src="https://ext.same-assets.com/3119757670/1684863505.png" alt="Dex" class="social-icon">
+          </a>
+          <a href="#" data-warning="true" aria-label="Pump" class="social-link">
+            <img src="https://ext.same-assets.com/3119757670/1454657913.png" alt="Pump" class="social-icon">
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Audio toggle button -->
+  <button id="audioToggle" class="audio-toggle" aria-label="Toggle audio">
+    <img src="https://ext.same-assets.com/3119757670/548389142.svg" alt="Toggle audio">
+  </button>
+
+  <!-- Audio elements -->
+  <audio id="backgroundMusic" loop preload="none">
+    <source src="https://github.com/fatfellas/fellawebsite/raw/refs/heads/main/FNS_WEB_SOUNDS_music.mp3" type="audio/mp3">
+  </audio>
+
+  <audio id="soundChaching" preload="none">
+    <source src="https://github.com/fatfellas/fellawebsite/raw/refs/heads/main/FNS_WEB_SOUNDS_chaching.mp3" type="audio/mp3">
+  </audio>
+
+  <script type="module" src="./scripts/main.ts"></script>
+</body>
+</html>
